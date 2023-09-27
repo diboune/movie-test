@@ -6,7 +6,3 @@ export async function action({ request }: DataFunctionArgs) {
     redirectTo: "/login",
   });
 }
-
-export const config = {
-  runtime: "nodejs",
-};

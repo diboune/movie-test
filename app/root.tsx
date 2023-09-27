@@ -29,7 +29,3 @@ export default function App() {
     </html>
   );
 }
-
-export const config = {
-  runtime: "edge",
-};

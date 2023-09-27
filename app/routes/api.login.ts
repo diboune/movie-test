@@ -7,7 +7,3 @@ export async function action({ request }: DataFunctionArgs) {
     throwOnError: true,
   });
 }
-
-export const config = {
-  runtime: "nodejs",
-};
