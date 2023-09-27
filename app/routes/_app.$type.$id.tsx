@@ -51,3 +51,7 @@ export async function loader({ request, params }: DataFunctionArgs) {
 
   return json({ item });
 }
+
+export const config = {
+  runtime: "nodejs",
+};
