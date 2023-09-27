@@ -96,12 +96,11 @@ export async function loader({ request, params }: DataFunctionArgs) {
     return json({ items, popular: null });
   }
 
+  const movie_popular = await moviedb.moviePopular();
+  const tv_popular = await moviedb.tvPopular();
+
   const popular =
-    type === "movies"
-      ? await moviedb.moviePopular()
-      : type === "series"
-      ? await moviedb.tvPopular()
-      : null;
+    type === "movies" ? movie_popular : type === "series" ? tv_popular : null;
 
   const items = await discover({ type, page });
   return json({ items, popular: popular?.results?.slice(0, 5) });
