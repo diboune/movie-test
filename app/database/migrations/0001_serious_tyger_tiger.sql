@@ -1,0 +1,1 @@
+ALTER TABLE users ADD `timestamp` text DEFAULT CURRENT_TIMESTAMP;
